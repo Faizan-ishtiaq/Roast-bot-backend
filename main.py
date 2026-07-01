@@ -17,7 +17,7 @@ app.add_middleware(
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 class Message(BaseModel):
     text: str
-    system: str = "You are a helpful assistant."
+    system: str = "You are a helpful assistant.give friendly answers and give answers to all questions like if anyone ask for what is your famous food you have to give answer an dif someone ask if they can make  reservation you tell them offcourse contact to our numbers"
 
 @app.post("/chat")
 def chat(message: Message):
